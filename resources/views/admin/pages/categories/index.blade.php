@@ -62,8 +62,7 @@
                                                                             data-slug={{ $item->slug }} class="update"><em
                                                                                 class="icon ni ni-pen"></em><span>Edit</span></a>
                                                                     </li>
-                                                                    <li><a href="javascript:void(0);"
-                                                                            data-url="information/profile"
+                                                                    <li><a href="javascript:void(0);" data-url="category"
                                                                             data-identity={{ $item->slug }}
                                                                             class="delete"><em
                                                                                 class="icon ni ni-trash"></em><span>Delete</span></a>
@@ -163,6 +162,6 @@
             let csrfToken = $('meta[name="csrf-token"]').attr("content");
         </script>
         <script src="{{ asset('custom/js/utils/delete.js') }}"></script>
-        <script src="{{ asset('custom/js/inform/category.js') }}"></script>
+        <script src="{{ asset('custom/js/inform/categories.js') }}"></script>
     @endpush
 @endsection

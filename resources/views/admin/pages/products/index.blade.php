@@ -63,8 +63,7 @@
                                                                             data-slug={{ $item->slug }} class="update"><em
                                                                                 class="icon ni ni-pen"></em><span>Edit</span></a>
                                                                     </li>
-                                                                    <li><a href="javascript:void(0);"
-                                                                            data-url="information/profile"
+                                                                    <li><a href="javascript:void(0);" data-url="product"
                                                                             data-identity={{ $item->slug }}
                                                                             class="delete"><em
                                                                                 class="icon ni ni-trash"></em><span>Delete</span></a>
