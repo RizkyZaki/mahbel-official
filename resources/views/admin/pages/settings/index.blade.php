@@ -43,8 +43,8 @@
                                             <div class="col-lg-7">
                                                 <div class="form-group">
                                                     <div class="form-control-wrap">
-                                                        <input type="text" class="form-control" name="name"
-                                                            value="{{ appSetting()->name }}">
+                                                        <input type="text" class="form-control" name="title"
+                                                            value="{{ appSetting()->title }}">
                                                     </div>
                                                 </div>
                                             </div>

@@ -1,4 +1,21 @@
 let baseUrl = "/dashboard/about";
+function texteditor() {
+    $("textarea.summernote").summernote({
+        placeholder: "Deskripsi",
+        tabsize: 2,
+        height: 150,
+        toolbar: [
+            ["style", ["style"]],
+            ["font", ["bold", "italic", "underline", "clear"]],
+            ["font", ["strikethrough", "superscript", "subscript"]],
+            ["fontname", ["fontname"]],
+            ["fontsize", ["fontsize"]],
+            ["color", ["color"]],
+            ["para", ["ul", "ol", "paragraph"]],
+            ["height", ["height"]],
+        ],
+    });
+}
 function createTextSlug() {
     var title = $("#title").val();
     $("#slug").val(generateSlug(title));
@@ -22,6 +39,7 @@ function generateSlug(text) {
 $(document).on("click", ".create", function (e) {
     e.preventDefault();
     $("#add-modal").modal("show");
+    texteditor();
 });
 
 $(document).on("click", ".add", function (e) {
@@ -39,7 +57,9 @@ $(document).on("click", ".add", function (e) {
         url: baseUrl,
         method: "POST",
         data: form,
-        async: true,
+        cache: false,
+        processData: false,
+        contentType: false,
         dataType: "json",
         headers: {
             "X-CSRF-TOKEN": csrfToken,
@@ -86,14 +106,15 @@ $(document).on("click", ".update", function (e) {
                 let data = response.data;
                 $('#change-modal input[name="title"]').val(data.title);
                 $('#change-modal input[name="slug"]').val(data.slug);
-                $('#change-modal input[name="description"]').val(
+
+                $('#change-modal textarea[name="description"]').val(
                     data.description
                 );
-
                 // Menyimpan slug asli sebelum pembaruan
                 $('#change-modal input[name="id"]').val(data.id);
 
                 $("#change-modal").modal("show");
+                texteditor();
             } else {
                 Swal.fire(
                     "Error",
@@ -128,7 +149,9 @@ $(document).on("click", ".save", function (e) {
         url: `${baseUrl}/${id}`,
         method: "PUT",
         data: form,
-        async: true,
+        cache: false,
+        processData: false,
+        contentType: false,
         dataType: "json",
         headers: {
             "X-CSRF-TOKEN": csrfToken,

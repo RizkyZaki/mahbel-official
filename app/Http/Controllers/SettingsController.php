@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Validator;
 
 class SettingsController extends Controller
 {
-    public function create()
+    public function index()
     {
         return view('admin.pages.settings.index', [
             'title' => 'Website Setting',
@@ -35,7 +35,7 @@ class SettingsController extends Controller
             ]);
         }
         $data = [
-            'name' => $request->name,
+            'title' => $request->title,
             'description' => $request->description,
             'keyword' => $request->keyword,
         ];

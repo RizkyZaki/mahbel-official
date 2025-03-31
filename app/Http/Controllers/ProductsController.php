@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categories;
 use App\Models\Products;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -18,6 +19,7 @@ class ProductsController extends Controller
             'title' => 'Product',
             'heading' => 'Data Product',
             'collection' => Products::latest()->get(),
+            'categories' => Categories::latest()->get(),
         ]);
     }
 

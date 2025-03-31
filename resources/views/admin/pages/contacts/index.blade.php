@@ -103,14 +103,14 @@
                     <p class="mb-3" id="detailNama">
                     </p>
                     <h6 class="fw-bold">
-                        No Handphone
-                    </h6>
-                    <p class="mb-3" id="detailPhone">
-                    </p>
-                    <h6 class="fw-bold">
                         Email
                     </h6>
                     <p class="mb-3" id="detailEmail">
+                    </p>
+                    <h6 class="fw-bold">
+                        Subyek
+                    </h6>
+                    <p class="mb-3" id="detailSubject">
                     </p>
                     <h6 class="fw-bold">
                         Deskripsi

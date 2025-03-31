@@ -31,7 +31,7 @@ class AboutController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required',
+            'title' => 'required',
             'description' => 'required',
         ]);
 
@@ -47,7 +47,7 @@ class AboutController extends Controller
         }
 
         $data = [
-            'name' => $request->name,
+            'title' => $request->title,
             'slug' => $request->slug,
             'description' => $request->description,
         ];
@@ -94,7 +94,7 @@ class AboutController extends Controller
     public function update(Request $request, string $id)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required',
+            'title' => 'required',
             'description' => 'required',
         ]);
 
@@ -110,7 +110,7 @@ class AboutController extends Controller
         }
 
         $data = [
-            'name' => $request->name,
+            'title' => $request->title,
             'slug' => $request->slug,
             'description' => $request->description,
         ];

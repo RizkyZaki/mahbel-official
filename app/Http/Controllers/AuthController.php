@@ -38,7 +38,7 @@ class AuthController extends Controller
             return response()->json([
                 'status' => 'true',
                 'title' => 'Welcome',
-                'description' => 'redirects to the Aling Globe lms panel',
+                'description' => 'redirects to the Dashboard panel',
                 'icon' => 'success'
             ]);
         } else {

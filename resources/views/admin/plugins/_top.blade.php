@@ -10,9 +10,10 @@
 <title>{{ $title ?? '' }} - {{ appSetting()->title }}</title>
 <link rel="stylesheet" href="{{ asset('admin/assets/css/dashlite.css?ver=3.0.3') }}">
 <link id="skin-default" rel="stylesheet" href="{{ asset('admin/assets/css/theme.css?ver=3.0.3') }}">
+
 {{-- <link id="skin-default" rel="stylesheet" href="{{ asset('admin/custom/spinner.css') }}"> --}}
 <link rel="stylesheet" href="{{ asset('admin/trix/trix.css') }}">
 <link href="{{ asset('admin/filepond/filepond.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('custom/css/style.css') }}">
 <link rel="stylesheet" href="{{ asset('custom/css/spanner.css') }}">
-<link id="skin-default" rel="stylesheet" href="{{ asset('admin/assets/css/editors/summernote.css') }}"
+<link id="skin-default" rel="stylesheet" href="{{ asset('admin/assets/css/editors/summernote.css') }}">

@@ -1,4 +1,4 @@
-let baseUrl = "/dashboard/about";
+let baseUrl = "/dashboard/categories";
 function createTextSlug() {
     var name = $("#name").val();
     $("#slug").val(generateSlug(name));
@@ -39,7 +39,9 @@ $(document).on("click", ".add", function (e) {
         url: baseUrl,
         method: "POST",
         data: form,
-        async: true,
+        cache: false,
+        processData: false,
+        contentType: false,
         dataType: "json",
         headers: {
             "X-CSRF-TOKEN": csrfToken,
@@ -125,7 +127,9 @@ $(document).on("click", ".save", function (e) {
         url: `${baseUrl}/${id}`,
         method: "PUT",
         data: form,
-        async: true,
+        cache: false,
+        processData: false,
+        contentType: false,
         dataType: "json",
         headers: {
             "X-CSRF-TOKEN": csrfToken,

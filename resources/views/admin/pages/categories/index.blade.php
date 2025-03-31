@@ -44,7 +44,10 @@
                                             <td class="nk-tb-col">
                                                 {{ $no++ }}
                                             </td>
-                                            <td class="nk-tb-col"><span class="">{{ $item->title }}</span></td>
+                                            <td class="nk-tb-col"><span class="">{{ $item->name }}</span></td>
+                                            <td class="nk-tb-col tb-col-mb"><span
+                                                    class="">{{ $item->products()->count() }}</span>
+                                            </td>
                                             <td class="nk-tb-col tb-col-mb"><span
                                                     class="">{{ timesInd($item->created_at) }}</span>
                                             </td>
@@ -162,6 +165,6 @@
             let csrfToken = $('meta[name="csrf-token"]').attr("content");
         </script>
         <script src="{{ asset('custom/js/utils/delete.js') }}"></script>
-        <script src="{{ asset('custom/js/inform/categories.js') }}"></script>
+        <script src="{{ asset('custom/js/master/categories.js') }}"></script>
     @endpush
 @endsection

@@ -107,8 +107,7 @@
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputText">Deskripsi <small class="text-danger">*</small></label>
-                            <input type="hidden" name="description" id="description">
-                            <trix-editor class="" input="description"></trix-editor>
+                            <textarea name="description" class="form-control summernote" placeholder="Deskripsi" required></textarea>
                         </div>
 
 
@@ -143,8 +142,7 @@
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputText">Deskripsi <small class="text-danger">*</small></label>
-                            <input type="hidden" name="description" id="description">
-                            <trix-editor class="" input="description"></trix-editor>
+                            <textarea name="description" class="form-control summernote" placeholder="Deskripsi" required></textarea>
                         </div>
 
                     </div>

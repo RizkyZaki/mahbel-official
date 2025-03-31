@@ -37,19 +37,19 @@
                         <h6 class="overline-title text-primary-alt">Master</h6>
                     </li>
                     <li class="nk-menu-item">
-                        <a href="{{ url('dashboard/master/categories') }}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-line-chart-up"></em></span>
+                        <a href="{{ url('dashboard/categories') }}" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-tags"></em></span>
                             <span class="nk-menu-text">Kategori</span>
                         </a>
                     </li>
                     <li class="nk-menu-item">
-                        <a href="{{ url('dashboard/master/products') }}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-line-chart-up"></em></span>
+                        <a href="{{ url('dashboard/products') }}" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-bag"></em></span>
                             <span class="nk-menu-text">Produk</span>
                         </a>
                     </li>
                     <li class="nk-menu-item">
-                        <a href="{{ url('dashboard/master/about') }}" class="nk-menu-link">
+                        <a href="{{ url('dashboard/about') }}" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-line-chart-up"></em></span>
                             <span class="nk-menu-text">Tentang Perusahaan</span>
                         </a>
@@ -58,13 +58,13 @@
                         <h6 class="overline-title text-primary-alt">Extra</h6>
                     </li>
                     <li class="nk-menu-item">
-                        <a href="{{ url('dashboard/extra/contacts') }}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-setting-fill"></em></span>
+                        <a href="{{ url('dashboard/contacts') }}" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-call"></em></span>
                             <span class="nk-menu-text">Kontak</span>
                         </a>
                     </li>
                     <li class="nk-menu-item">
-                        <a href="{{ url('dashboard/extra/settings') }}" class="nk-menu-link">
+                        <a href="{{ url('dashboard/settings') }}" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-setting-fill"></em></span>
                             <span class="nk-menu-text">Settings</span>
                         </a>
