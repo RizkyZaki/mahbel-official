@@ -10,9 +10,9 @@ use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\SettingsController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('logout', [AuthController::class, 'logout']);
 Route::controller(ClientController::class)->group(function () {
@@ -24,8 +24,8 @@ Route::controller(ClientController::class)->group(function () {
     Route::get('categories', 'categories');
     Route::get('contact', 'contact');
     Route::post('contact', 'contactPost');
-    Route::post('location', 'location');
-    Route::post('carrier', 'carrier');
+    Route::get('location', 'location');
+    Route::get('carrier', 'carrier');
 });
 Route::middleware('guest')->group(function () {
     Route::get('login', [AuthController::class, 'login'])->name('login');

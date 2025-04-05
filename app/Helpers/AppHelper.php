@@ -1,11 +1,18 @@
 <?php
 
+use App\Models\Abouts;
 use App\Models\Settings;
 
 if (!function_exists('appSetting')) {
     function appSetting()
     {
         return Settings::first();
+    }
+}
+if (!function_exists('about')) {
+    function about()
+    {
+        return Abouts::all();
     }
 }
 

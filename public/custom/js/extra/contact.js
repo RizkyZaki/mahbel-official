@@ -1,4 +1,4 @@
-let baseUrl = "/dashboard/contact";
+let baseUrl = "/dashboard/contacts";
 $(document).on("click", ".detail", function (e) {
     e.preventDefault();
     $("#modal-detail").modal("show");
@@ -12,7 +12,7 @@ $(document).on("click", ".detail", function (e) {
             $("#detailNama").text(response.name);
             $("#detailEmail").text(response.email);
             $("#detailSubject").text(response.subject);
-            $("#detailContent").text(response.content);
+            $("#detailContent").text(response.description);
         },
     });
 });

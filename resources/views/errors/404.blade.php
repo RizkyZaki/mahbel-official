@@ -19,12 +19,10 @@
                         <div class="nk-block-content nk-error-ld text-center">
                             <img class="nk-error-gfx" src="{{ asset('client/404.png') }}" alt="">
                             <div class="wide-xs mx-auto">
-                                <h3 class="nk-error-title">Oops! Mengapa anda di sini?</h3>
-                                <p class="nk-error-text">Kami mohon maaf atas ketidaknyamanan ini. Sepertinya Anda
-                                    mencoba mengakses
-                                    suatu halaman
-                                    yang telah dihapus atau tidak pernah ada.</p>
-                                <a href="{{ url('/') }}" class="btn btn-lg btn-primary mt-2">Kembali</a>
+                                <h3 class="nk-error-title">Oops! Why are you here?</h3>
+                                <p class="nk-error-text">We apologize for the inconvenience. It looks like you’re trying
+                                    to access a page that has been removed or never existed.</p>
+                                <a href="{{ url('/') }}" class="btn btn-lg btn-primary mt-2">Go Back</a>
                             </div>
                         </div>
                     </div><!-- .nk-block -->

@@ -10,7 +10,10 @@ class DashboardController extends Controller
     {
         return view('admin.pages.dashboard.index', [
             'title' => 'Dashboard',
-            'heading' => 'Page Dashboard',
+            'heading' => 'Welcome To Dashboard',
+            'countProd' => \App\Models\Products::count(),
+            'countCat' => \App\Models\Categories::count(),
+            'countContact' => \App\Models\Contacts::count(),
         ]);
     }
 }

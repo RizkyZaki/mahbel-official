@@ -62,11 +62,12 @@
                                                                     class="icon ni ni-more-h"></em></a>
                                                             <div class="dropdown-menu dropdown-menu-end">
                                                                 <ul class="link-list-opt no-bdr">
-                                                                    <li><a href="" data-id={{ $item->id }}
+                                                                    <li><a href="javascript:void(0);"
+                                                                            data-id={{ $item->id }}
                                                                             data-name={{ $item->name }} class="detail"><em
                                                                                 class="icon ni ni-info"></em><span>Detail</span></a>
                                                                     </li>
-                                                                    <li><a href="" data-url="contact"
+                                                                    <li><a href="javascript:void(0);" data-url="contact"
                                                                             data-identity={{ $item->id }}
                                                                             data-name={{ $item->name }} class="hapus"><em
                                                                                 class="icon ni ni-trash"></em><span>Hapus</span></a>
@@ -125,7 +126,7 @@
         <script>
             let csrfToken = $('meta[name="csrf-token"]').attr('content');
         </script>
-        <script src="{{ asset('admin/logic/delete.js') }}"></script>
-        <script src="{{ asset('admin/logic/extra/contact.js') }}"></script>
+        <script src="{{ asset('custom/js/utils/delete.js') }}"></script>
+        <script src="{{ asset('custom/js/extra/contact.js') }}"></script>
     @endpush
 @endsection
