@@ -19,7 +19,7 @@ class SettingsController extends Controller
     public function site(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required',
+            'title' => 'required',
             'description' => 'required',
             'keyword' => 'required',
         ]);

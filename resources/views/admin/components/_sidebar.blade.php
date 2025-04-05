@@ -3,8 +3,9 @@
         <div class="nk-sidebar-brand">
             <a href="javascript:void(0);" class="logo-link nk-sidebar-logo" style="margin-top: 15px">
                 <span class="logo-dark logo-img">
-                    <h4><img class="aling-logo-landscape"
-                            src="{{ asset('storage/assets/site/logo/' . appSetting()->logo) }}"></h4>
+                    <h4><img class="aling-logo-small" src="{{ asset('storage/assets/site/logo/' . appSetting()->logo) }}">
+                        ADMIN PANEL
+                    </h4>
                 </span>
                 <span class="logo-small logo-img logo-img-small">
                     <h4><img class="aling-logo-small"

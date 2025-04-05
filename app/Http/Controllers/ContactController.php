@@ -12,7 +12,7 @@ class ContactController extends Controller
         return view('admin.pages.contacts.index', [
             'title' => 'Contact',
             'heading' => 'Data Contact',
-            'collection' => Contacts::latest()->get(),
+            'contact' => Contacts::latest()->get(),
         ]);
     }
     public function show($id)

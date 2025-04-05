@@ -45,9 +45,15 @@
                                             <td class="nk-tb-col">
                                                 {{ $no++ }}
                                             </td>
-                                            <td class="nk-tb-col"><span class="">{{ $item->title }}</span></td>
+                                            <td class="nk-tb-col"><span class="">{{ $item->name }}</span></td>
                                             <td class="nk-tb-col tb-col-mb"><span
                                                     class="">{{ timesInd($item->created_at) }}</span>
+                                            </td>
+                                            <td class="nk-tb-col tb-col-mb"><span
+                                                    class="">{{ formatIDR($item->price) }}</span>
+                                            </td>
+                                            <td class="nk-tb-col tb-col-mb"><span
+                                                    class="">{{ $item->categories->name }}</span>
                                             </td>
                                             <td class="nk-tb-col nk-tb-col-tools">
                                                 <ul class="nk-tb-actions gx-1">
@@ -109,7 +115,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label class="form-label">Category <small class="text-danger">*</small></label>
-                            <select class="form-control" name="category_id">
+                            <select class="form-select js-select2" name="category_id">
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                                 @endforeach
@@ -117,7 +123,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label class="form-label">Price <small class="text-danger">*</small></label>
-                            <input type="number" class="form-control" name="price" placeholder="Price">
+                            <input type="text" class="form-control currency" name="price" placeholder="Price">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputText">Gambar</label>
@@ -161,7 +167,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label class="form-label">Category <small class="text-danger">*</small></label>
-                            <select class="form-control" name="category_id">
+                            <select class="form-select js-select2" name="category_id">
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                                 @endforeach
@@ -169,7 +175,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label class="form-label">Price <small class="text-danger">*</small></label>
-                            <input type="number" class="form-control" name="price" placeholder="Price">
+                            <input type="text" class="form-control currency" name="price" placeholder="Price">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputText">Gambar</label>
@@ -194,6 +200,7 @@
             let csrfToken = $('meta[name="csrf-token"]').attr("content");
         </script>
         <script src="{{ asset('custom/js/utils/delete.js') }}"></script>
+        <script src="{{ asset('custom/js/utils/currency.js') }}"></script>
         <script src="{{ asset('custom/js/master/product.js') }}"></script>
     @endpush
 @endsection

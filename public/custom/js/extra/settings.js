@@ -2,12 +2,12 @@ let baseUrl = "/dashboard/settings";
 $(document).on("click", ".site", function (e) {
     $("div.spanner").addClass("show");
     $("div.overlay").addClass("show");
-    let name = $('input[name="name"]').val();
+    let title = $('input[name="title"]').val();
     let description = $('textarea[name="description"]').val();
     let keyword = $('input[name="keyword"]').val();
     let logo = $('input[name="logo"]').prop("files")[0];
     let form = new FormData();
-    form.append("name", name);
+    form.append("title", title);
     form.append("logo", logo);
     form.append("keyword", keyword);
     form.append("description", description);

@@ -57,13 +57,13 @@ class ProductsController extends Controller
 
         $eks = $request->file('image')->getClientOriginalExtension();
         $request->file('image')->storeAs('assets', md5($request->file('image')) . '.' . $eks);
-
+        $price = unFormatIDR($request->price);
         $data = [
             'name' => $request->name,
             'slug' => $request->slug,
-            'price' => $request->price,
+            'price' => $price,
+            'description' => $request->description,
             'category_id' => $request->category_id,
-            'price' => $request->price,
             'image' => md5($request->file('image')) . '.' . $eks,
         ];
 
@@ -72,7 +72,7 @@ class ProductsController extends Controller
         return response()->json([
             'status' => 'true',
             'title' => 'Success',
-            'description' => 'Category Added Successfully!',
+            'description' => 'Products Added Successfully!',
             'icon' => 'success'
         ]);
     }
@@ -129,13 +129,13 @@ class ProductsController extends Controller
 
         $eks = $request->file('image')->getClientOriginalExtension();
         $request->file('image')->storeAs('assets', md5($request->file('image')) . '.' . $eks);
-
+        $price = unFormatIDR($request->price);
         $data = [
             'name' => $request->name,
             'slug' => $request->slug,
             'description' => $request->description,
             'category_id' => $request->category_id,
-            'price' => $request->price,
+            'price' => $price,
         ];
         if ($request->file('image')) {
             Storage::delete('assets/' . $cat->image);
@@ -149,7 +149,7 @@ class ProductsController extends Controller
         return response()->json([
             'status' => 'true',
             'title' => 'Success',
-            'description' => 'Category Updated Successfully!',
+            'description' => 'Products Updated Successfully!',
             'icon' => 'success'
         ]);
     }
@@ -170,14 +170,14 @@ class ProductsController extends Controller
             return response()->json([
                 'status' => 'true',
                 'title' => 'Success',
-                'description' => 'Category Deleted.',
+                'description' => 'Products Deleted.',
                 'icon' => 'success',
             ]);
         } else {
             return response()->json([
                 'status' => 'false',
                 'title' => 'Error',
-                'description' => 'Category Not Found.',
+                'description' => 'Products Not Found.',
                 'icon' => 'error',
             ]);
         }

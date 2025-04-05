@@ -22,3 +22,16 @@ if (!function_exists('timesInd')) {
         return $result;
     }
 }
+
+if (!function_exists('unFormatIDR')) {
+    function unFormatIDR($value)
+    {
+        return preg_replace('/([^0-9])/i', '', $value);
+    }
+}
+if (!function_exists('formatIDR')) {
+    function formatIDR($value)
+    {
+        return "Rp" . number_format($value, 0, ',', '.');
+    }
+}

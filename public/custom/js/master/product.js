@@ -1,4 +1,4 @@
-let baseUrl = "/dashboard/product";
+let baseUrl = "/dashboard/products";
 function texteditor() {
     $("textarea.summernote").summernote({
         placeholder: "Deskripsi",
@@ -48,7 +48,7 @@ $(document).on("click", ".add", function (e) {
     $("div.overlay").addClass("show");
     let name = $('#add-modal input[name="name"]').val();
     let slug = $('#add-modal input[name="slug"]').val();
-    let description = $('#add-modal input[name="description"]').val();
+    let description = $('#add-modal textarea[name="description"]').val();
     let price = $('#add-modal input[name="price"]').val();
     let category_id = $('#add-modal select[name="category_id"]').val();
     let image = $('#add-modal input[name="image"]').prop("files")[0];
@@ -151,7 +151,7 @@ $(document).on("click", ".save", function (e) {
     let slug = $('#change-modal input[name="slug"]').val();
     let name = $('#change-modal input[name="name"]').val();
     let image = $('#change-modal input[name="image"]').prop("files")[0];
-    let description = $('#change-modal input[name="description"]').val();
+    let description = $('#change-modal textarea[name="description"]').val();
     let price = $('#change-modal input[name="price"]').val();
     let category_id = $('#change-modal select[name="category_id"]').val();
     let form = new FormData();
